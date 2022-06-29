@@ -1,2 +1,3 @@
-# Streamlit-Template
-Streamlit template project for new projects
+# Streamlit Template Project
+
+Streamlit template project for new streamlit projects.
