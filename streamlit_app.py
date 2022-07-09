@@ -7,7 +7,7 @@ if __name__ == "__main__":
                     initial_sidebar_state='collapsed')
     st.title('🔨 Streamlit Template')
     st.markdown("""
-        This app is only a tempplate for a new Streamlit project. <br>
+        This app is only a template for a new Streamlit project. <br>
 
         ---
         """, unsafe_allow_html=True)
