@@ -17,7 +17,7 @@ The Dockerfile is based on `python:3.9-slim` image and shall mimic the Streamlit
 1. Clone the template project.
 2. Write your code in the `streamlit_app.py` file.
 3. If necessary: Add additional python dependencies to the `requirements.txt` file.
-4. If necessary: Add binary dependencies to the `packages.txt` file. Keep the line-endings in Linux format. Uncomment the binary installation lines in the Dockerfile.
+4. If necessary: Add binary dependencies to the `packages.txt` file. Keep the line-endings in Linux (LF only) format. Uncomment the binary installation lines in the Dockerfile.
 5. Build the docker image locally (commands see below or in the Dockerfile).
 6. Run the docker container locally (commands see below or in the Dockerfile) and debug your streamlit app locally until you are ready to deploy to Streamlit Cloud.
 7. Deploy the project to Streamlit Cloud and test it.
@@ -42,4 +42,4 @@ docker run -ti -p 8501:8501 --rm streamlit:latest
 
 ## Status
 
-> Last changed: 2022-06-29
+> Last changed: 2022-12-20
