@@ -40,6 +40,12 @@ docker run -ti -p 8501:8501 --rm streamlit:latest
 
 > For more details, look into the [Dockerfile](Dockerfile) file.
 
+## Resources
+
+See also the official documentation from Streamlit about docker deployments:
+
+<https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker>
+
 ## Status
 
 > Last changed: 2022-12-20
