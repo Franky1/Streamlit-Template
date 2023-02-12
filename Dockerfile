@@ -16,8 +16,7 @@ RUN apt-get update \
     build-essential \
     software-properties-common \
     git \
-    python3-dev \
-    && rm -rf /var/lib/apt/lists/*
+    python3-dev
 
 WORKDIR /app
 
