@@ -1,0 +1,7 @@
+/* custom styling of streamlit components */
+/* just an example here */
+
+hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
