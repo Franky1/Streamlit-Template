@@ -1,3 +1,3 @@
-# Never modify line endings of our bash and text scripts
-*.sh -crlf
-*.txt -crlf
+# Keep all *.txt and *.sh files with linux file endings
+*.txt text eol=lf
+*.sh text eol=lf
