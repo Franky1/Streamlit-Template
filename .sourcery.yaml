@@ -2,5 +2,8 @@ refactor:
   python_version: '3.9'
   skip:
     - assign-if-exp
-    - merge-dict-assign
+    - merge-nested-ifs
     - inline-immediately-returned-variable
+    - list-literal
+    - dict-literal
+    - use-named-expression
