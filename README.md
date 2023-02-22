@@ -48,4 +48,4 @@ See also the official documentation from Streamlit about docker deployments:
 
 ## Status
 
-> Last changed: 2022-12-20
+> Last changed: 2023-02-22
