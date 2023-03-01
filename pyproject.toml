@@ -1,0 +1,13 @@
+# Below are the configuration settings for the tool "ruff".
+# It is a linter and used to check the code quality of the python code.
+# https://beta.ruff.rs/docs/
+# In vscode you can install the extension "ruff" to see the results.
+[tool.ruff]
+# exclude files from ruff analysis that are in .gitignore
+respect-gitignore = true
+# exclude some more folders for ruff analysis
+extend-exclude = [".streamlit", "resources"]
+# Allow lines to be as long as 120 characters.
+line-length = 120
+# Assume Python 3.9
+target-version = "py39"
