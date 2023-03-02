@@ -1,3 +1,11 @@
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.9"
+show_error_codes = true
+strict = true
+
 # Below are the configuration settings for the tool "ruff".
 # It is a linter and used to check the code quality of the python code.
 # https://beta.ruff.rs/docs/
