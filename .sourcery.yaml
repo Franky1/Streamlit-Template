@@ -1,6 +1,22 @@
-refactor:
+ignore:
+  - __pycache__
+  - venv
+  - env
+  - .git
+  - .github
+  - .vscode
+  - .idea
+  - .streamlit
+  - assets
+
+rule_settings:
+  enable: [default]
   python_version: '3.9'
-  skip:
+  rule_types:
+    - refactoring
+    - suggestion
+    - comment
+  disable:
     - assign-if-exp
     - merge-nested-ifs
     - inline-immediately-returned-variable
