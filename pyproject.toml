@@ -14,7 +14,7 @@ strict = true
 # exclude files from ruff analysis that are in .gitignore
 respect-gitignore = true
 # exclude some more folders for ruff analysis
-extend-exclude = [".streamlit", "resources"]
+extend-exclude = [".streamlit", "assets"]
 # Allow lines to be as long as 120 characters.
 line-length = 120
 # Assume Python 3.9

@@ -17,21 +17,27 @@ How to use this template project see the following steps:
 9. Adjust the README.md file and describe your streamlit project.
 10. Delete this "Usage" file before committing your project to GitHub.
 
-## Python **virtualenv** setup
+## Python **virtualenv** setup for local development 🐍
 
-How to setup a Python virtual environment for local development if you don't want or don't have to use Docker:
+If you don't want to use Docker for local development, you can also use a Python virtual environment.
+How to setup a Python virtual environment for local development:
 
 ```shell
+# install virtualenv package:
 pip install --upgrade virtualenv
-python -m venv env
-env\Scripts\activate.bat
+# make and activate virtual environment:
+python -m venv venv
+venv\Scripts\activate.bat
+# install dependencies within the virtual environment:
 python -m pip install --upgrade pip
 pip install --upgrade -r requirements.txt
+# develop and test your streamlit app within the virtual environment
 # ......
+# after development, deactivate virtual environment:
 deactivate.bat
 ```
 
-## Dockerfile
+## Dockerfile for local development 🐳
 
 This template contains a Dockerfile for local debugging and testing of the project, before deploying the project to Streamlit Cloud. This shall ease the process of developing and deploying projects to Streamlit Cloud, without endless back and forth trial-and-error between local development environment, GitHub and Streamlit Cloud.
 
@@ -55,12 +61,17 @@ docker run -ti -p 8501:8501 --rm streamlit:latest
 
 > For more details, look into the [Dockerfile](Dockerfile) file.
 
-## Resources
+## Hints ⚠️
+
+- I don't recommend to use conda and an `environment.yml` file for streamlit projects. Better use a clean `requirements.txt` file.
+- If you write your `requirements.txt` file, do it manually! Don't use `pip freeze > requirements.txt` to generate the file! This will generate a lot of unnecessary dependencies, which will slow down or even crash the deployment process on Streamlit Cloud.
+
+## Resources 📚
 
 See also the official documentation from Streamlit about docker deployments:
 
 <https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker>
 
-## Status
+## Status ✔️
 
-> Last changed: 2023-03-03
+> Last changed: 2023-03-12

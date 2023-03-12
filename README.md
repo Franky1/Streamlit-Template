@@ -6,22 +6,22 @@ Streamlit template project for new streamlit projects.
 
 ## *How to use this template project see in the [Usage.md](Usage.md) file*
 
-## Description
+## Description ✏️
 
 > Describe your streamlit project here.
 
-## Issues
+## Status ✔️
+
+> Last changed: 2023-03-12
+
+## Issues 🚩
 
 > Describe known issues here.
 
-## ToDo
+## ToDo ☑️
 
 > Describe open ToDo's here.
 
-## Resources
+## Resources 📚
 
 > Describe useful resources here.
-
-## Status
-
-> Last changed: 2023-03-03

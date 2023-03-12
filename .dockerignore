@@ -41,3 +41,5 @@ LICENSE
 .mypy_cache/
 *.log
 Dockerfile
+env/
+venv/
