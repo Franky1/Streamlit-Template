@@ -11,7 +11,7 @@ ignore:
 
 rule_settings:
   enable: [default]
-  python_version: '3.9'
+  python_version: '3.11'
   rule_types:
     - refactoring
     - suggestion

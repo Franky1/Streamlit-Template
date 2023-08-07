@@ -12,7 +12,7 @@ Streamlit template project for new streamlit projects.
 
 ## Status ✔️
 
-> Last changed: 2023-03-12
+> Last changed: 2023-08-07
 
 ## Issues 🚩
 

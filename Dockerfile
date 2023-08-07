@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -11,12 +11,14 @@ ENV PYTHONUNBUFFERED=1 \
 # we need some build tools for installing additional python pip packages
 RUN apt-get update \
     && apt-get install --yes --no-install-recommends \
+    build-essential \
     gcc \
     g++ \
-    build-essential \
+    cmake \
     software-properties-common \
     git \
-    python3-dev
+    python3-dev \
+    nano
 
 WORKDIR /app
 
