@@ -22,19 +22,35 @@ How to use this template project see the following steps:
 If you don't want to use Docker for local development, you can also use a Python virtual environment.
 How to setup a Python virtual environment for local development:
 
-```shell
-# install virtualenv package:
+
+1.  install virtualenv package:
+```bash
 pip install --upgrade virtualenv
-# make and activate virtual environment:
+```
+2.  make and activate virtual environment:
+```bash
 python -m venv venv
-venv\Scripts\activate.bat
-# install dependencies within the virtual environment:
+```
+- On Windows:
+```bash
+venv\Scripts\activate
+```
+- On macOS and Linux:
+```bash
+source venv/bin/activate
+```
+3. install dependencies within the virtual environment:
+```bash
 python -m pip install --upgrade pip
 pip install --upgrade -r requirements.txt
-# develop and test your streamlit app within the virtual environment
-# ......
-# after development, deactivate virtual environment:
-deactivate.bat
+```
+4. develop and test your streamlit app within the virtual environment
+```bash
+streamlit run streamlit-app.py
+```
+5. after development, deactivate virtual environment:
+```bash
+deactivate
 ```
 
 ## Dockerfile for local development 🐳
