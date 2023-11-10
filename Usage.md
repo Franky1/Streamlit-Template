@@ -1,8 +1,9 @@
-# Usage
+<!-- markdownlint-disable MD026 -->
+# Usage :wrench:
 
-This template is made for **Python 3.9** version.
+This template is made for **Python 3.11** version.
 
-*You can delete this file before committing your project to GitHub.*
+> *You can delete this file before committing your project to GitHub.*
 
 How to use this template project see the following steps:
 
@@ -17,41 +18,57 @@ How to use this template project see the following steps:
 9. Adjust the README.md file and describe your streamlit project.
 10. Delete this "Usage" file before committing your project to GitHub.
 
-## Python **virtualenv** setup for local development 🐍
+---
+
+## Python **virtualenv** setup for local development :snake:
 
 If you don't want to use Docker for local development, you can also use a Python virtual environment.
 How to setup a Python virtual environment for local development:
 
+### 1. Install virtualenv package
 
-1.  install virtualenv package:
 ```bash
 pip install --upgrade virtualenv
 ```
-2.  make and activate virtual environment:
+
+### 2. Make and activate virtual environment
+
 ```bash
-python -m venv venv
+python -m venv .venv
 ```
-- On Windows:
+
+#### On Windows
+
 ```bash
-venv\Scripts\activate
+.venv\Scripts\activate
 ```
-- On macOS and Linux:
+
+#### On macOS and Linux
+
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 ```
-3. install dependencies within the virtual environment:
+
+### 3. Install dependencies within the virtual environment
+
 ```bash
 python -m pip install --upgrade pip
 pip install --upgrade -r requirements.txt
 ```
-4. develop and test your streamlit app within the virtual environment
+
+### 4. Develop and test your streamlit app within the virtual environment
+
 ```bash
 streamlit run streamlit-app.py
 ```
-5. after development, deactivate virtual environment:
+
+### 5. After development, deactivate virtual environment
+
 ```bash
 deactivate
 ```
+
+---
 
 ## Dockerfile for local development 🐳
 
@@ -77,10 +94,14 @@ docker run -ti -p 8501:8501 --rm streamlit:latest
 
 > For more details, look into the [Dockerfile](Dockerfile) file.
 
+---
+
 ## Hints ⚠️
 
 - I don't recommend to use conda and an `environment.yml` file for streamlit projects. Better use a clean `requirements.txt` file.
 - If you write your `requirements.txt` file, do it manually! Don't use `pip freeze > requirements.txt` to generate the file! This will generate a lot of unnecessary dependencies, which will slow down or even crash the deployment process on Streamlit Cloud.
+
+---
 
 ## Resources 📚
 
@@ -90,4 +111,4 @@ See also the official documentation from Streamlit about docker deployments:
 
 ## Status ✔️
 
-> Last changed: 2023-03-12
+> Last changed: 2023-11-11

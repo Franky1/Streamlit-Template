@@ -10,13 +10,14 @@ ENV PYTHONUNBUFFERED=1 \
 
 # we need some build tools for installing additional python pip packages
 RUN apt-get update \
-    && apt-get install --yes --no-install-recommends \
+    && apt-get install --yes \
+    software-properties-common \
     build-essential \
     gcc \
     g++ \
     cmake \
-    software-properties-common \
     git \
+    curl \
     python3-dev \
     nano
 
@@ -31,6 +32,9 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 EXPOSE 8501
+
+HEALTHCHECK --interval=1m --timeout=10s \
+    CMD curl --fail http://localhost:8501/_stcore/health
 
 COPY . .
 
