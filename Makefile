@@ -1,10 +1,10 @@
-.PHONY: all update venv venvupdate docker cleanpy cleanvenv cleanall
+.PHONY: all update venv venvupdate schema docker cleanpy cleanvenv cleanall
 
 # run one shell only
-.ONESHELL: all update venv venvupdate docker cleanpy cleanvenv cleanall
+.ONESHELL: all update venv venvupdate schema docker cleanpy cleanvenv cleanall
 
 # disable running of targets in parallel
-.NOTPARALLEL: all update venv venvupdate docker cleanpy cleanvenv cleanall
+.NOTPARALLEL: all update venv venvupdate schema docker cleanpy cleanvenv cleanall
 
 # predefined variables
 CURRDIRECTORY := "$(notdir $(CURDIR))"
@@ -14,16 +14,17 @@ DOCKERTAG := "$(shell python -c "print('$(CURRDIRECTORY)'.lower())"):latest"
 ifeq ($(OS),Windows_NT)
 	# windows
 	# set python executable path for python virtualenv
-	PYTHONVENV := .venv/Scripts/python.exe
+	PYTHONVENV := .venv/Scripts/
+	PYTHONVENVEXE := .venv/Scripts/python.exe
 else
 	# linux or mac
 	# set python executable path for python virtualenv
-	PYTHONVENV := .venv/bin/python
+	PYTHONVENV := .venv/bin/
+	PYTHONVENVEXE := .venv/bin/python
 endif
 
 # default target
 all: cleanpy update venv
-	@echo "+++++++++++++++++++ all START +++++++++++++++++++"
 	@echo
 	@echo "******************* all FINISHED *******************"
 
@@ -47,17 +48,17 @@ venv:
 	python -m venv .venv --clear --upgrade-deps
 	@echo
 	@echo "Check Virtual Environment Python Version..."
-	$(PYTHONVENV) --version
-	$(PYTHONVENV) -c "import sys; print(sys.executable)"
+	$(PYTHONVENVEXE) --version
+	$(PYTHONVENVEXE) -c "import sys; print(sys.executable)"
 	@echo
 	@echo "Install/Update venv dependencies..."
-	$(PYTHONVENV) -m pip install --upgrade pip setuptools poetry
+	$(PYTHONVENVEXE) -m pip install --upgrade pip setuptools poetry
 	@echo
 	@echo "Install project dependencies..."
-	$(PYTHONVENV) -m pip install --upgrade -r requirements.txt
+	$(PYTHONVENVEXE) -m pip install --upgrade -r requirements.txt
 	@echo
 	@echo "Check for outdated dependencies and just list them..."
-	$(PYTHONVENV) -m pip list --outdated
+	$(PYTHONVENVEXE) -m pip list --outdated
 	@echo
 	@echo "******************* virtualenv venv FINISHED *******************"
 
@@ -66,17 +67,17 @@ venvupdate:
 	@echo "+++++++++++++++++++ venvupdate START +++++++++++++++++++"
 	@echo
 	@echo "Check Virtual Environment Python Version..."
-	$(PYTHONVENV) --version
-	$(PYTHONVENV) -c "import sys; print(sys.executable)"
+	$(PYTHONVENVEXE) --version
+	$(PYTHONVENVEXE) -c "import sys; print(sys.executable)"
 	@echo
 	@echo "Update venv dependencies..."
-	$(PYTHONVENV) -m pip install --upgrade pip setuptools poetry
+	$(PYTHONVENVEXE) -m pip install --upgrade pip setuptools poetry
 	@echo
 	@echo "Update project dependencies..."
-	$(PYTHONVENV) -m pip install --upgrade -r requirements.txt
+	$(PYTHONVENVEXE) -m pip install --upgrade -r requirements.txt
 	@echo
 	@echo "Check for outdated dependencies and just list them..."
-	$(PYTHONVENV) -m pip list --outdated
+	$(PYTHONVENVEXE) -m pip list --outdated
 	@echo
 	@echo "******************* venvupdate FINISHED *******************"
 
@@ -95,6 +96,7 @@ cleanpy:
 	@echo "+++++++++++++++++++ cleanpy START +++++++++++++++++++"
 	@echo
 	rm -rf __pycache__
+	rm -rf utils/__pycache__
 	@echo
 	@echo "******************* cleanpy FINISHED *******************"
 
@@ -108,6 +110,5 @@ cleanvenv:
 
 # clean all
 cleanall: cleanpy cleanvenv
-	@echo "+++++++++++++++++++ cleanall START +++++++++++++++++++"
 	@echo
 	@echo "******************* cleanall FINISHED *******************"
