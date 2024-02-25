@@ -13,7 +13,7 @@ Streamlit template project for new streamlit projects.
 
 ## Status :heavy_check_mark:
 
-> Last changed: 2023-11-11
+> Last changed: 2024-02-25
 
 ## Issues :bug:
 

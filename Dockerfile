@@ -1,4 +1,5 @@
-FROM python:3.11-slim
+# this base image seems to be quite similar to the streamlit cloud environment
+FROM python:3.11-slim-bullseye
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
