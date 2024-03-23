@@ -1,9 +1,9 @@
 <!-- markdownlint-disable MD026 -->
-# Streamlit Template Project
+# Streamlit Template Project :page_with_curl:
 
 [![Streamlit](https://img.shields.io/badge/Go%20To-Streamlit%20Cloud-red?logo=streamlit)](https://streamlit.io/)
 
-Streamlit template project for new streamlit projects.
+Streamlit **Template** project for new streamlit projects.
 
 ## :point_right: *How to use this template project see in the [Usage.md](Usage.md) file* :point_left:
 
@@ -13,7 +13,7 @@ Streamlit template project for new streamlit projects.
 
 ## Status :heavy_check_mark:
 
-> Last changed: 2024-02-25
+> Last changed: 2024-03-23
 
 ## Issues :bug:
 

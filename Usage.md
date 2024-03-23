@@ -102,18 +102,34 @@ docker run -ti -p 8501:8501 -v ${pwd}:/app --rm streamlit:latest
 
 ---
 
+## Devcontainer for Visual Studio Code or GitHub Codespaces :cat:
+
+The [.devcontainer.json](.devcontainer/devcontainer.json) file streamlines development environments by providing a consistent configuration for both Visual Studio Code and GitHub Codespaces. This file defines the tools, runtimes, extensions, and settings required for your project. Here's how it works:
+
+- VS Code: The "Remote-Containers" extension in VS Code reads your `.devcontainer.json` to build or access a development container customized for your project. This ensures everyone works in an identical environment.
+- GitHub Codespaces: Codespaces uses `.devcontainer.json` to automatically provision cloud-based development environments. With one click, you have a ready-to-code workspace, saving time and setup hassle.
+
+---
+
 ## Makefile :bulb:
 
-For lazy or advanced users, there is also a **Makefile** included in this template project.
+For lazy or advanced users, there is also a [**Makefile**](Makefile) included in this template project.
 
 Details about how to use the Makefile with the `make` command see [Makefile.md](Makefile.md).
+
+---
+
+## Streamlit Cloud deployment :cloud:
+
+To deploy the project to Streamlit Cloud, you have to create a new project on Streamlit Cloud and connect it to your GitHub repository.
+How to deploy a project to Streamlit Cloud see in the official documentation [here](https://docs.streamlit.io/streamlit-community-cloud).
 
 ---
 
 ## Hints :warning:
 
 - I don't recommend to use conda and an `environment.yml` file for streamlit projects. Better use a plain and simple `requirements.txt` file.
-- If you write your `requirements.txt` file, do it manually! Don't use `pip freeze > requirements.txt` to generate the file! This will generate a lot of unnecessary or even uninstallable dependencies, which will slow down or even crash the deployment process on Streamlit Cloud.
+- If you write your `requirements.txt` file, do it **manually**! Don't use `pip freeze > requirements.txt` to generate the file! This will generate a lot of unnecessary or even uninstallable dependencies, which will slow down or even crash the deployment process on Streamlit Cloud.
 
 ---
 
