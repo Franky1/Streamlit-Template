@@ -1,0 +1,37 @@
+{
+    "recommendations": [
+        // Python extensions (Microsoft)
+        "ms-python.autopep8",
+        "ms-python.black-formatter",
+        "ms-python.debugpy",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        // Python extensions (Non-Microsoft)
+        "charliermarsh.ruff", // Ruff formatter.
+        "kevinrose.vsc-python-indent", // Correct Python indentation.
+        // Tools
+        "aaron-bond.better-comments", // Better comments.
+        "alefragnani.bookmarks", // Bookmarks.
+        "github.copilot", // GitHub Copilot.
+        "github.copilot-chat", // GitHub Copilot Chat.
+        "gruntfuggly.todo-tree", // Show TODO, FIXME, etc. in a tree view.
+        "lmcarreiro.vscode-smart-column-indenter", // Smart Column Indenter.
+        "mechatroner.rainbow-csv", // Rainbow CSV.
+        // "mhutchie.git-graph", // Git Graph.
+        "ms-azuretools.vscode-docker", // Docker support.
+        "ms-vscode-remote.remote-containers", // Remote - Containers.
+        "oderwat.indent-rainbow", // Indent Rainbow.
+        "pflannery.vscode-versionlens", // Version Lens.
+        "piotrpalarz.vscode-gitignore-generator", // Generate .gitignore files.
+        "samuelcolvin.jinjahtml", // Jinja HTML syntax highlighting.
+        "shardulm94.trailing-spaces", // Highlight trailing spaces.
+        "tamasfe.even-better-toml", // Improved TOML syntax highlighting.
+        "tyriar.sort-lines", // Sort Lines.
+        // Themes
+        "ahmadawais.shades-of-purple", // Shades of Purple theme.
+        "pkief.material-icon-theme", // Material Icon Theme.
+        "zhuangtongfa.material-theme", // Material Theme.
+    ]
+}

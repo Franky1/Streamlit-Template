@@ -1,5 +1,5 @@
 # this base image seems to be quite similar to the streamlit cloud environment
-FROM python:3.11-slim-bullseye
+FROM python:3.12-slim-bullseye
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -29,8 +29,8 @@ WORKDIR /app
 # COPY packages.txt packages.txt
 # RUN xargs -a packages.txt apt-get install --yes
 
-COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
+COPY pyproject.toml pyproject.toml
+RUN pip install --no-cache-dir --upgrade .
 
 EXPOSE 8501
 

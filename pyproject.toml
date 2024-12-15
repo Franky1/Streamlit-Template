@@ -1,0 +1,24 @@
+[project]
+name = "streamlit-app"
+version = "0.0.1"
+description = "Streamlit App"
+dependencies = [
+    "streamlit",
+]
+
+
+[tool.ruff]
+# exclude files from ruff analysis that are in .gitignore
+respect-gitignore = true
+# exclude some more folders for ruff analysis
+extend-exclude = [".devcontainer", ".venv"]
+# Allow lines to be as long as 160 characters.
+line-length = 160
+# Assume Python 3.11
+target-version = "py312"
+# indent with 4 spaces
+indent-width = 4
+
+[tool.ruff.lint.isort]
+force-single-line = true
+lines-after-imports = 2

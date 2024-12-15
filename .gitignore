@@ -176,7 +176,11 @@ cython_debug/
 .idea/
 
 ### VisualStudioCode ###
-.vscode/
+.vscode/**
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
 
 # Local History for Visual Studio Code
 .history/
