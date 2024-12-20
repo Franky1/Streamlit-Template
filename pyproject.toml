@@ -6,7 +6,6 @@ dependencies = [
     "streamlit",
 ]
 
-
 [tool.ruff]
 # exclude files from ruff analysis that are in .gitignore
 respect-gitignore = true
