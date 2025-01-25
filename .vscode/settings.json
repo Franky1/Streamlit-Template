@@ -16,25 +16,10 @@
     },
     "python.analysis.autoSearchPaths": true,
     "python.analysis.extraPaths": [
-        "${workspaceFolder}/tools",
+        "${workspaceFolder}/utils",
     ],
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
     "ruff.importStrategy": "useBundled",
-    // File associations
-    "files.associations": {
-        "*.hzp": "xml",
-    },
-    // C/C++ settings
-    "C_Cpp.default.compilerPath": "clang.exe",
-    "clang-format.executable": "clang-format.exe",
-    "cmake.configureOnOpen": false,
-    "[cmake]": {
-        "editor.defaultFormatter": "ms-vscode.cmake-tools",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit"
-        }
-    },
     // Tree settings
     "todo-tree.tree.showCountsInTree": true,
     "todo-tree.highlights.useColourScheme": true,
@@ -53,6 +38,5 @@
     ],
     "todo-tree.filtering.excludeGlobs": [
         ".vscode/**",
-        "**/FlashIntegrityCheck/*/**"
     ]
 }

@@ -18,6 +18,9 @@ target-version = "py312"
 # indent with 4 spaces
 indent-width = 4
 
+[tool.ruff.lint]
+unfixable = ["F401"]  # disable deleting unused imports
+
 [tool.ruff.lint.isort]
 force-single-line = true
 lines-after-imports = 2
