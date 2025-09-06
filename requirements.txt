@@ -1,2 +1,3 @@
-# add the required pypi packages here that your app actually needs
-streamlit
+# It is recommended to pin the versions of your dependencies to ensure reproducibility.
+# You can find the latest version of Streamlit here: https://pypi.org/project/streamlit/
+streamlit==1.38.0

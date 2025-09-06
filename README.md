@@ -1,36 +1,49 @@
 <!-- markdownlint-disable MD026 -->
-# Streamlit Template Project :page_with_curl:
+# Streamlit Template Project _V2_ :page_with_curl:
 
-[![Streamlit](https://img.shields.io/badge/Go%20To-Streamlit%20Cloud-red?logo=streamlit)](https://streamlit.io/)
+[![Python Version](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.38.0-red.svg)](https://www.streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Streamlit **Template** project for new streamlit projects.
+This is a template project for new Streamlit applications.
 
-## :point_right: *How to use this template project see in the [Usage.md](Usage.md) file* :point_left:
+## :rocket: Get Started
 
-## Description :pencil2:
+To get started, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+For more detailed instructions, including how to use Docker and deploy to Streamlit Cloud, see the [Usage.md](Usage.md) file.
+
+## :pencil2: Description
 
 > Describe your streamlit project here.
 
-## Status :heavy_check_mark:
+## :heavy_check_mark: Status
 
-> Last changed: 2024-03-23
+> Last changed: 2025-09-06
 
-## Issues :bug:
+## :bug: Issues
 
 > Describe known issues here.
 
-## ToDo :ballot_box_with_check:
+## :ballot_box_with_check: ToDo
 
 > Describe open ToDo's here.
 
-## Ideas :bulb:
+## :bulb: Ideas
 
 > Describe ideas for future development here.
 
-## Links :link:
+## :link: Links
 
 > Describe useful links here.
 
-## Resources :books:
+## :books: Resources
 
 > Describe useful resources here.

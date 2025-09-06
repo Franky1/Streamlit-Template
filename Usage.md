@@ -1,144 +1,64 @@
 <!-- markdownlint-disable MD026 -->
-# Usage :wrench:
+# :wrench: Usage
 
-This template is made for **Python 3.11** version.
+This template is designed for Python 3.11 and Streamlit 1.38.0.
 
 > :point_right: *You can delete this file before committing your project to GitHub.*
 
-How to use this template project see the following steps:
+## Project Structure
 
-1. Clone the template project.
-2. Write your code in the `streamlit_app.py` file.
-3. If necessary: Add additional python dependencies to the `requirements.txt` file.
-4. If necessary: Add binary dependencies to the `packages.txt` file. Keep the line-endings in Linux (LF only) format. Uncomment the binary installation lines in the Dockerfile.
-5. Build the Docker image locally (commands see below or in the Dockerfile).
-6. Run the Docker container locally (commands see below or in the Dockerfile) and debug your streamlit app locally until you are ready to deploy to Streamlit Cloud.
-7. Deploy the project to Streamlit Cloud and test it.
-8. Adjust the `Open in Streamlit` badge in this README.md file, that it points to the deployed project.
-9. Adjust the README.md file and describe your streamlit project.
-10. Delete this "Usage" file before committing your project to GitHub.
+- `streamlit_app.py`: The main entry point for your Streamlit application.
+- `pages/`: Directory for additional pages in your multipage app.
+- `utils/`: For helper functions and other modules.
+- `assets/`: For static assets like images, css files, etc.
+- `requirements.txt`: Python dependencies.
+- `packages.txt`: System-level dependencies for Docker.
 
----
+## Local Development
 
-## Python **virtualenv** setup for local development :snake:
+You can develop your app locally using either a Python virtual environment or Docker.
 
-If you don't want to use Docker for local development, you can also use a Python virtual environment.
-How to setup a Python virtual environment for local development:
+### Python Virtual Environment
 
-### 1. Install virtualenv package
+1.  **Create and activate a virtual environment:**
+    ```bash
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+    ```
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3.  **Run the app:**
+    ```bash
+    streamlit run streamlit_app.py
+    ```
 
-```bash
-pip install --upgrade virtualenv
-```
+### Docker
 
-### 2. Make and activate virtual environment
+1.  **Build the Docker image:**
+    ```bash
+    docker build -t streamlit-app .
+    ```
+2.  **Run the Docker container:**
+    ```bash
+    docker run -p 8501:8501 streamlit-app
+    ```
 
-```bash
-python -m venv .venv
-```
+## Multipage Apps
 
-#### On Windows
+To create a multipage app, simply add more Python files to the `pages/` directory. Each file will appear as a new page in the sidebar. For more details, see the [Streamlit documentation on multipage apps](https://docs.streamlit.io/library/get-started/multipage-apps).
 
-```bash
-.venv\Scripts\activate
-```
+## Deployment
 
-#### On macOS and Linux
+This template is ready to be deployed to [Streamlit Community Cloud](https://streamlit.io/cloud). Connect your GitHub repository to Streamlit Cloud and deploy your app with a few clicks.
 
-```bash
-source .venv/bin/activate
-```
+## Customization
 
-### 3. Install dependencies within the virtual environment
+- **Add Python packages:** Add them to `requirements.txt`.
+- **Add system-level packages:** Add them to `packages.txt` and uncomment the relevant lines in the `Dockerfile`.
+- **Add custom CSS:** Edit `assets/styles/style.css` and uncomment the corresponding lines in `streamlit_app.py`.
 
-```bash
-python -m pip install --upgrade pip
-pip install --upgrade -r requirements.txt
-```
+## :heavy_check_mark: Status
 
-### 4. Develop and test your streamlit app within the virtual environment
-
-```bash
-streamlit run streamlit-app.py
-```
-
-### 5. After development, deactivate virtual environment
-
-```bash
-deactivate
-```
-
----
-
-## Dockerfile for local development :whale:
-
-This template contains a Dockerfile for local debugging and testing of the project, before deploying the project to Streamlit Cloud. This shall ease the process of developing and deploying projects to Streamlit Cloud, without endless back and forth trial-and-error between local development environment, GitHub and Streamlit Cloud.
-
-The Dockerfile is based on `python:3.11-slim` image and shall mimic the Streamlit Cloud runtime as closely as possible.
-
-**Hint**: If you run the Dockerfile locally on a Windows host system, you have to uncomment the `[server]` settings in the `.streamlit/config.toml` file. Comment these lines again before deploying the project to Streamlit Cloud.
-
-### Docker commands :computer:
-
-To build the docker image locally, run the following command:
-
-```bash
-docker build --progress=plain --tag streamlit:latest .
-```
-
-Then to run the docker container locally, run the following command:
-
-```bash
-docker run -ti -p 8501:8501 --rm streamlit:latest
-```
-
-If you want to run the docker container locally and make code changes on the fly, run the following command:
-
-```bash
-docker run -ti -p 8501:8501 -v ${pwd}:/app --rm streamlit:latest
-```
-
-> :point_right: For more details, look into the [Dockerfile](Dockerfile) file itself.
-
----
-
-## Devcontainer for Visual Studio Code or GitHub Codespaces :cat:
-
-The [.devcontainer.json](.devcontainer/devcontainer.json) file streamlines development environments by providing a consistent configuration for both Visual Studio Code and GitHub Codespaces. This file defines the tools, runtimes, extensions, and settings required for your project. Here's how it works:
-
-- VS Code: The "Remote-Containers" extension in VS Code reads your `.devcontainer.json` to build or access a development container customized for your project. This ensures everyone works in an identical environment.
-- GitHub Codespaces: Codespaces uses `.devcontainer.json` to automatically provision cloud-based development environments. With one click, you have a ready-to-code workspace, saving time and setup hassle.
-
----
-
-## Makefile :bulb:
-
-For lazy or advanced users, there is also a [**Makefile**](Makefile) included in this template project.
-
-Details about how to use the Makefile with the `make` command see [Makefile.md](Makefile.md).
-
----
-
-## Streamlit Cloud deployment :cloud:
-
-To deploy the project to Streamlit Cloud, you have to create a new project on Streamlit Cloud and connect it to your GitHub repository.
-How to deploy a project to Streamlit Cloud see in the official documentation [here](https://docs.streamlit.io/streamlit-community-cloud).
-
----
-
-## Hints :warning:
-
-- I don't recommend to use conda and an `environment.yml` file for streamlit projects. Better use a plain and simple `requirements.txt` file.
-- If you write your `requirements.txt` file, do it **manually**! Don't use `pip freeze > requirements.txt` to generate the file! This will generate a lot of unnecessary or even uninstallable dependencies, which will slow down or even crash the deployment process on Streamlit Cloud.
-
----
-
-## Resources :books:
-
-See also the official documentation from Streamlit about docker deployments:
-
-<https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker>
-
-## Status :heavy_check_mark:
-
-> Last changed: 2023-11-11
+> Last changed: 2025-09-06
