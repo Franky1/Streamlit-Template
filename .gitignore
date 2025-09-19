@@ -181,6 +181,7 @@ cython_debug/
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/tasks.json
+!.vscode/mcp.json
 
 # Local History for Visual Studio Code
 .history/
