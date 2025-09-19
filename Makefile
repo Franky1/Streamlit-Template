@@ -55,7 +55,7 @@ venv:
 	$(PYTHONVENVEXE) -m pip install --upgrade pip setuptools poetry
 	@echo
 	@echo "Install project dependencies..."
-	$(PYTHONVENVEXE) -m pip install --upgrade -r requirements.txt
+	$(PYTHONVENVEXE) -m pip install --upgrade .
 	@echo
 	@echo "Check for outdated dependencies and just list them..."
 	$(PYTHONVENVEXE) -m pip list --outdated
@@ -74,7 +74,7 @@ venvupdate:
 	$(PYTHONVENVEXE) -m pip install --upgrade pip setuptools poetry
 	@echo
 	@echo "Update project dependencies..."
-	$(PYTHONVENVEXE) -m pip install --upgrade -r requirements.txt
+	$(PYTHONVENVEXE) -m pip install --upgrade .
 	@echo
 	@echo "Check for outdated dependencies and just list them..."
 	$(PYTHONVENVEXE) -m pip list --outdated

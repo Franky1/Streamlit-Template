@@ -1,0 +1,42 @@
+{
+    // Jupyter Notebook settings
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    },
+    // Python settings
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/utils",
+    ],
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "ruff.importStrategy": "useBundled",
+    // Tree settings
+    "todo-tree.tree.showCountsInTree": true,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.general.statusBar": "total",
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.general.periodicRefreshInterval": 1,
+    "todo-tree.tree.expanded": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.filtering.excludeGlobs": [
+        ".vscode/**",
+    ]
+}
