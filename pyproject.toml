@@ -13,7 +13,7 @@ respect-gitignore = true
 extend-exclude = [".devcontainer", ".venv"]
 # Allow lines to be as long as 160 characters.
 line-length = 160
-# Assume Python 3.11
+# Assume Python 3.12 syntax.
 target-version = "py312"
 # indent with 4 spaces
 indent-width = 4
@@ -24,3 +24,7 @@ unfixable = ["F401"]  # disable deleting unused imports
 [tool.ruff.lint.isort]
 force-single-line = true
 lines-after-imports = 2
+
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
